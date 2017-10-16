@@ -18,8 +18,3 @@ run:
   path: /sbin/netstat
   args: ["-rn"]
  
-run:
-  path: ethtool
-  args: ["eth0"]
-
-
