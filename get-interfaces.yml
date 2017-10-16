@@ -1,0 +1,25 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: alpine
+
+run:
+  path: /sbin/ifconfig
+  args: ["-a"]
+
+run: 
+  path: ip
+  args: addr
+
+run:
+  path: /sbin/netstat
+  args: -rn
+ 
+run:
+  path: ethtool
+  args: eth0
+
+
