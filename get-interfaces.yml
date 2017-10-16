@@ -6,5 +6,8 @@ image_resource:
   source:
     repository: alpine
 
+inputs:
+  - input: support-scripts
+
 run:
-  path: ls
+  path: ./support-scripts/get-interfaces.sh
