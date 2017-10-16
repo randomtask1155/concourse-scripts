@@ -9,5 +9,9 @@ image_resource:
 inputs:
 - name: support-scripts
 
+#run:
+#  path: ./support-scripts/get-interfaces.sh
+
 run:
-  path: ./support-scripts/get-interfaces.sh
+  path: ls
+  args: ["-l", "./support-scripts"]
