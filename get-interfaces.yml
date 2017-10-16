@@ -10,8 +10,11 @@ inputs:
 - name: support-scripts
 
 run:
-  path: /bin/bash
-  args: ["./support-scripts/get-interfaces.sh"]
+  path: ./support-scripts/get-interfaces.sh
+
+#run:
+#  path: /bin/bash
+#  args: ["-c", "./support-scripts/get-interfaces.sh"]
 
 #run:
 #  path: ls

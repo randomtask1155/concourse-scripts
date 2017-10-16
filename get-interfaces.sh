@@ -1,4 +1,3 @@
-#!/bin/bash
 
 /sbin/ifconfig -a
 /sbin/ip addr
