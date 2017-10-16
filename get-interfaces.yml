@@ -7,14 +7,4 @@ image_resource:
     repository: alpine
 
 run:
-  path: /sbin/ifconfig
-  args: ["-a"]
-
-run: 
-  path: /sbin/ip
-  args: ["addr"]
-
-run:
-  path: /bin/netstat
-  args: ["-rn"]
- 
+  path: ./get-interfaces.sh
