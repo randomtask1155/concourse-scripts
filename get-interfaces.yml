@@ -12,14 +12,14 @@ run:
 
 run: 
   path: ip
-  args: addr
+  args: ["addr"]
 
 run:
   path: /sbin/netstat
-  args: -rn
+  args: ["-rn"]
  
 run:
   path: ethtool
-  args: eth0
+  args: ["eth0"]
 
 
