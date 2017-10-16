@@ -7,4 +7,4 @@ image_resource:
     repository: alpine
 
 run:
-  path: ./get-interfaces.sh
+  path: ls
