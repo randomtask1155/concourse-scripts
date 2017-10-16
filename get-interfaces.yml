@@ -11,10 +11,10 @@ run:
   args: ["-a"]
 
 run: 
-  path: ip
+  path: /sbin/ip
   args: ["addr"]
 
 run:
-  path: /sbin/netstat
+  path: /bin/netstat
   args: ["-rn"]
  
