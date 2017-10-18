@@ -1,0 +1,13 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: ubuntu
+
+inputs:
+- name: support-scripts
+
+run:
+  path: ./support-scripts/scripts/get-interfaces.sh

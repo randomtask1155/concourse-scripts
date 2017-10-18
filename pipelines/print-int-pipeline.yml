@@ -1,0 +1,14 @@
+---
+resources:
+- name: support-scripts
+  type: git
+  source:
+    uri: https://github.com/randomtask1155/concourse-scripts.git
+
+jobs:
+- name: dump-interfaces
+  serial: true
+  plan:
+  - get: support-scripts
+  - task: print-interfaces
+    file: support-scripts/tasks/get-interfaces.yml
