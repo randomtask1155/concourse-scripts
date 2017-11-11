@@ -1,0 +1,12 @@
+cf-api: 
+cf-username: 
+cf-password: 
+cf-organization: 
+cf-space: 
+sso-service-target:
+sso-admin-client: 
+sso-admin-secret:
+opsmanager-hostname:
+director-ip:
+uaa-login-endpoint:
+idp-app-name: idp-saml-ci

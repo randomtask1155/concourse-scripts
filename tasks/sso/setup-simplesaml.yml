@@ -1,0 +1,20 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: ubuntu
+
+params:
+  OPSMANAGER_HOSTNAME:
+  DIRECTOR_IP:
+  UAA_LOGIN_ENDPOINT:
+  IPD_APP_NAME:
+
+inputs:
+- name: support-scripts
+
+run:
+  path: ./saml-idp-app/scripts/sso/setup-simplesaml.sh
+  args: [{{sso-service-target}}, {{sso-admin-client}}, {{sso-admin-secret}}]

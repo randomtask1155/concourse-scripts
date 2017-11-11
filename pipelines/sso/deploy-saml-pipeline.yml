@@ -1,0 +1,52 @@
+---
+resources:
+- name: sso-hero-app
+  type: git
+  source:
+    uri: https://github.com/randomtask1155/sso-hero.git
+
+- name: saml-idp-app
+  type: git
+  source:
+    uri: https://github.com/pivotal-gss/simplesamlphp-for-cf.git
+
+- name: cf-deploy-app
+  type: cf
+  source:
+    api: {{cf-api}}
+    username: {{cf-username}}
+    password: {{cf-password}}
+    organization: {{cf-organization}}
+    space: {{cf-space}}
+    skip_cert_check: true
+
+- name: support-scripts
+  type: git
+  source:
+    uri: https://github.com/randomtask1155/concourse-scripts.git
+
+jobs:
+- name: deploy-saml
+  serial: true
+  plan:
+  - get: support-scripts 
+  - get: sso-hero-app
+  - get: saml-idp-app
+  - task: deploy-simplesamlphp
+    file: support-scripts/tasks/sso/setup-simplesaml.yml
+    params:
+      OPSMANAGER_HOSTNAME: {{opsmanager-hostname}}
+      DIRECTOR_IP: {{director-ip}}
+      UAA_LOGIN_ENDPOINT: {{uaa-login-endpoint}}
+      IPD_APP_NAME: {{idp-app-name}}
+  - task: setup-sso-resources
+    file: support-scripts/tasks/sso/setup-sso-resources.yml
+    params:
+      SSO_SERVICE_INSTANCE: {{sso-service-instance}}
+      SSO_ADMIN_CLIENT: {{sso-admin-client}}
+      SSO_ADMIN_SECRET: {{sso-admin-secret}}
+  - put: cf-deploy-app
+    params:
+      manifest: sso-hero-app/manifest.yml
+      path: sso-hero-app
+  
