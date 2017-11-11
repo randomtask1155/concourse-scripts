@@ -28,6 +28,10 @@ uaac token client get $CLIENT -s $SECRET
 uaac user add --emails user1@domain.com -p password
 uaac user add --emails user2@domain.com -p password
 
+uaac group add power.fly
+uaac group add power.strength
+uaac group add power.invisibility
+
 uaac member add power.fly user1
 uaac member add power.strength user1
 uaac member add power.invisibility user1
