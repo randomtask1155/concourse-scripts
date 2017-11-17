@@ -39,6 +39,11 @@ jobs:
       DIRECTOR_IP: {{director-ip}}
       UAA_LOGIN_ENDPOINT: {{uaa-login-endpoint}}
       IPD_APP_NAME: {{idp-app-name}}
+      CF_USERNAME: {{cf-username}}
+      CF_PASSWORD: {{cf-password}}
+      CF_ORG: {{cf-organization}}
+      CF_SPACE: {{cf-space}}
+      CF_API: {{cf-api}}
   - task: setup-sso-resources
     file: support-scripts/tasks/sso/setup-sso-resources.yml
     params:
