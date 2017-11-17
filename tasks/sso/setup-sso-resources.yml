@@ -11,4 +11,4 @@ inputs:
 
 run:
   path: ./support-scripts/scripts/sso/setup-sso-resources.sh
-  args: [{{sso-service-target}}, {{sso-admin-client}}, {{sso-admin-secret}}]
+  args: [{{sso-service-instance}}, {{sso-admin-client}}, {{sso-admin-secret}}]

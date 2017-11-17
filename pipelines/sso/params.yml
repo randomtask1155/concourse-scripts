@@ -3,7 +3,7 @@ cf-username:
 cf-password: 
 cf-organization: 
 cf-space: 
-sso-service-target:
+sso-service-instance:
 sso-admin-client: 
 sso-admin-secret:
 opsmanager-hostname:
