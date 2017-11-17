@@ -24,11 +24,14 @@ gem install cf-uaac
 uaac -v
 uaac target $UAA_TARGET --skip-ssl-validation
 uaac token client get $CLIENT -s $SECRET
-uaac user add --emails user1@domain.com -p password
-uaac user add --emails user2@domain.com -p password
 
-uaac group add power.fly
-uaac group add power.strength
+
+set +e # disable errors here in case user already exits etc.. 
+uaac user add user1 --emails user1@domain.com -p password
+uaac user add user2 --emails user2@domain.com -p password
+
+uaac group add power.fly 
+uaac group add power.strength 
 uaac group add power.invisibility
 
 uaac member add power.fly user1
@@ -38,3 +41,5 @@ uaac member add power.invisibility user1
 uaac member add power.fly user2
 uaac member add power.strength user2
 uaac member add power.invisibility user2
+set -e
+
