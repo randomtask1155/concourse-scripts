@@ -17,4 +17,3 @@ inputs:
 
 run:
   path: ./saml-idp-app/scripts/sso/setup-simplesaml.sh
-  args: [{{sso-service-instance}}, {{sso-admin-client}}, {{sso-admin-secret}}]
