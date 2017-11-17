@@ -4,6 +4,7 @@ cf-password:
 cf-organization: 
 cf-space: 
 sso-service-instance:
+sso-service-target:
 sso-admin-client: 
 sso-admin-secret:
 opsmanager-hostname:

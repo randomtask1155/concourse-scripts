@@ -47,7 +47,7 @@ jobs:
   - task: setup-sso-resources
     file: support-scripts/tasks/sso/setup-sso-resources.yml
     params:
-      SSO_SERVICE_INSTANCE: {{sso-service-instance}}
+      SSO_SERVICE_TARGET: {{sso-service-target}}
       SSO_ADMIN_CLIENT: {{sso-admin-client}}
       SSO_ADMIN_SECRET: {{sso-admin-secret}}
   - put: cf-deploy-app

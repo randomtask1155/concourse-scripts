@@ -2,11 +2,10 @@
 
 set -e
 
-INSTANCE=$SSO_SERVICE_INSTANCE
+UAA_TARGET=$SSO_SERVICE_TARGET
 CLIENT=$SSO_ADMIN_CLIENT
 SECRET=$SSO_ADMIN_SECRET
 
-echo $INSTANCE
 apt-get -y update
 apt-get -y install build-essential wget zlib1g-dev libssl-dev
 
@@ -23,7 +22,7 @@ gem install bundler
 gem install cf-uaac
 
 uaac -v
-uaac target $INSTANCE --skip-ssl-validation
+uaac target $UAA_TARGET --skip-ssl-validation
 uaac token client get $CLIENT -s $SECRET
 uaac user add --emails user1@domain.com -p password
 uaac user add --emails user2@domain.com -p password
