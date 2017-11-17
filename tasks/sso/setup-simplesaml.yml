@@ -14,6 +14,7 @@ params:
 
 inputs:
 - name: support-scripts
+- name: sampl-idp-app
 
 run:
   path: ./saml-idp-app/scripts/sso/setup-simplesaml.sh
