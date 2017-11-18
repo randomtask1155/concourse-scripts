@@ -50,6 +50,10 @@ jobs:
       SSO_SERVICE_TARGET: {{sso-service-target}}
       SSO_ADMIN_CLIENT: {{sso-admin-client}}
       SSO_ADMIN_SECRET: {{sso-admin-secret}}
+  - task: update-sso-hero-manifest
+    file: support-scripts/tasks/sso/update-sso-hero-manifest.yml
+    params:
+      SSO_SERVICE_INSTANCE: {{sso-service-instance}}
   - put: cf-deploy-app
     params:
       manifest: sso-hero-app/manifest.yml
