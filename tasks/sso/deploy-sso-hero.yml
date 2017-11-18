@@ -19,4 +19,4 @@ inputs:
 - name: sso-hero-app
 
 run:
-  path: ./support-scripts/scripts/sso/update-sso-hero-manifest.sh
+  path: ./support-scripts/scripts/sso/deploy-sso-hero.sh
