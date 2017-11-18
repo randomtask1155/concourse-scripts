@@ -3,6 +3,7 @@ cf-username:
 cf-password: 
 cf-organization: 
 cf-space: 
+cf-app-domain:
 sso-service-instance:
 sso-service-target:
 sso-admin-client: 

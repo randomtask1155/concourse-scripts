@@ -8,11 +8,13 @@ image_resource:
 
 params:
   SSO_SERVICE_INSTANCE:
+  CF_APP_DOMAIN:
   CF_USERNAME:
   CF_PASSWORD:
   CF_ORG:
   CF_SPACE:
   CF_API:
+  CF_APP_DOMAIN:
 
 inputs:
 - name: support-scripts

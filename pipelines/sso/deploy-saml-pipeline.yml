@@ -59,4 +59,5 @@ jobs:
       CF_ORG: {{cf-organization}}
       CF_SPACE: {{cf-space}}
       CF_API: {{cf-api}}
+      CF_APP_DOMAIN: {{cf-app-domain}}
   
