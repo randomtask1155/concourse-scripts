@@ -10,15 +10,15 @@ resources:
   source:
     uri: https://github.com/pivotal-gss/simplesamlphp-for-cf.git
 
-- name: cf-deploy-app
-  type: cf
-  source:
-    api: {{cf-api}}
-    username: {{cf-username}}
-    password: {{cf-password}}
-    organization: {{cf-organization}}
-    space: {{cf-space}}
-    skip_cert_check: true
+# - name: cf-deploy-app
+#   type: cf
+#   source:
+#     api: {{cf-api}}
+#     username: {{cf-username}}
+#     password: {{cf-password}}
+#     organization: {{cf-organization}}
+#     space: {{cf-space}}
+#     skip_cert_check: true
 
 - name: support-scripts
   type: git
@@ -50,12 +50,13 @@ jobs:
       SSO_SERVICE_TARGET: {{sso-service-target}}
       SSO_ADMIN_CLIENT: {{sso-admin-client}}
       SSO_ADMIN_SECRET: {{sso-admin-secret}}
-  - task: update-sso-hero-manifest
-    file: support-scripts/tasks/sso/update-sso-hero-manifest.yml
+  - task: deploy-sso-hero
+    file: support-scripts/tasks/sso/deploy-sso-hero.yml
     params:
       SSO_SERVICE_INSTANCE: {{sso-service-instance}}
-  - put: cf-deploy-app
-    params:
-      manifest: sso-hero-app/manifest.yml
-      path: sso-hero-app
+      CF_USERNAME: {{cf-username}}
+      CF_PASSWORD: {{cf-password}}
+      CF_ORG: {{cf-organization}}
+      CF_SPACE: {{cf-space}}
+      CF_API: {{cf-api}}
   

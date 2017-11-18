@@ -8,9 +8,15 @@ image_resource:
 
 params:
   SSO_SERVICE_INSTANCE:
+  CF_USERNAME:
+  CF_PASSWORD:
+  CF_ORG:
+  CF_SPACE:
+  CF_API:
 
 inputs:
 - name: support-scripts
+- name: sso-hero-app
 
 run:
   path: ./support-scripts/scripts/sso/update-sso-hero-manifest.sh
