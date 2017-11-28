@@ -15,7 +15,7 @@
 |sso-admin-client   |empty   | Client ID of the manually created admin client  |   
 |sso-admin-secret   |empty   | Client secret of the manually created admin client   |   
 |opsmanager-hostname   | empty  | opsmgr.domain.io  |  
-|director-ip   | empty  |   |   | ip address of the deployed bosh director  |
+|director-ip   | empty  | ip address of the deployed bosh director  |
 |uaa-login-endpoint   |empty   |  PAS UAA login endpoint "https://login.system.domain" |  
 |idp-app-name   |idp-saml-ci   |  Name used for the simplesamlphp app |   
 
