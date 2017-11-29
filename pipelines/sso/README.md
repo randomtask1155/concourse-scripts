@@ -5,9 +5,12 @@
 * Create a SSO admin client ( [see docs](http://docs.pivotal.io/p-identity/1-5/configure-apps/index.html#admin) ) in your new sso instance as the creds will be needed in the params.txt [ `sso-admin-client` | `sso-admin-secret`]
 
 
+# External Repos
+
+* simplesamlphp - https://github.com/pivotal-gss/simplesamlphp-for-cf
+* sso hero - https://github.com/randomtask1155/sso-hero
 
 # How to deploy SSO Saml Pipeline
-
 
 * update `params.txt`
 
