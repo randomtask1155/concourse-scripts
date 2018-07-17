@@ -24,7 +24,7 @@ cf login -a $CF_API -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORG -s $CF_SPACE --sk
 
 
 cd ./saml-idp-app/
-echo opsman_uaa: \"https://${OPSMANAGER_HOSTNAME}/uaa\" > $CONFIGFILE
+echo opsman_uaa: \"https://${OPSMANAGER_HOSTNAME}\" > $CONFIGFILE
 echo bosh_uaa: \"https://${DIRECTOR_IP}:8443\" >> $CONFIGFILE
 echo ert_uaa: \"http://${UAA_LOGIN_ENDPOINT}\" >> $CONFIGFILE
 echo app_name: \"${IPD_APP_NAME}\" >> $CONFIGFILE
