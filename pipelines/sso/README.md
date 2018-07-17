@@ -56,6 +56,12 @@ fly -t lab02 set-pipeline -p sso-saml -c deploy-saml-pipeline.yml -l params-test
 |samluser   |password   |  basic user with external group `pcfusers` |
 |samladmin   |password   |  basic user with external group `pcfadmins` |
 
+## Default SAML IDP Admin User
+| Username  | Password | Description  |
+|---|---|---|
+|admin   |pizza9pixel   |  Admin user account for the SAML IDP App |
+
+
 
 ## Switch from internal to SAML Auth in SSO
 
