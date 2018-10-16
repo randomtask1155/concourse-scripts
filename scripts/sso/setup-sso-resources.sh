@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -e
+set -ex
 
 UAA_TARGET=$SSO_SERVICE_TARGET
 CLIENT=$SSO_ADMIN_CLIENT
